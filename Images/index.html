@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Portofolio</title>
+            <title>Formulir Kontak</title>
+            <link rel="stylesheet" href="styles.css">
+            <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        </head>
+        <body>
+            <nav>
+              <input type="checkbox" id="check">
+              <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+              </label>
+              <label class="logo">Nptrij</label>
+              <ul>
+                <i class="uil uil-search search-icon" id="searchIcon"></i>
+                <div class="search-box">
+                  <i class="uil uil-search search-icon"></i>
+                  <input type="text" placeholder="Search here..." />
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#why Should Me?">why should Me?</a></li>
+                </ul>
+            </nav>
+            <section></section>
+        </body>
+        <style>
+             /* CSS untuk halaman web responsif */
+    
+            /* Untuk layar dengan lebar maksimum 500px */
+            @media screen and (max-width: 500px) {
+                .landing-content {
+                    flex-direction: column;
+                }
+                .intro, .profile-pic, .icon-land {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            /* CSS untuk navbar */
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: montserrat;
+            
+        }
+        nav{
+            background: #C850A7;
+            height: 80px;
+            width: 100%;
+        }
+        label.logo{
+            color:white;
+            font-size:35px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;    
+        }
+        nav ul{
+            float:right;
+            margin-right: 20px;
+        }
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color:white;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppearcase;
+        }
+        a.active,a.hover{
+            background: #ebe1e1c8;
+            transition: .5s;
+        }
+        .checkbtn{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 8opx;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        @media (max-width: 952px){
+            label.logo{
+                font-size: 30px;
+                padding-left: 50px;
+            }
+            nav ul li a{
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 858px){
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #e79cda;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all .5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a:hover,a.active{
+                background: none;
+                color: #144a8d;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        section{
+            background: url(bg1.jpg) no-repeat;
+            background-size: cover;
+            height: calc(100vh - 80px);
+        }
+        .navbar {
+            background: #144bba;
+            color: #333;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .nav-links li a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .nav-links li a:hover {
+            color: #0e3bb7;
+        }
+    
+            /* Untuk layar dengan lebar maksimum 300px */
+            @media screen and (max-width: 300px) {
+                .navbar {
+                    padding: 0.5rem 0;
+                }
+                .nav-links li {
+                    display: block;
+                    margin: 10px 0;
+                }
+            }
+        </style>
+    <body>
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Portofolio</title>
+            <style>
+               /* CSS Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #FFA775;
+            color: #333;
+        }
+
+        .navbar {
+            background: #C850A7;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .nav-links {
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .landing-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .intro {
+            flex: 1;
+        }
+
+        .profile-pic {
+            flex: 1;
+            text-align: center;
+        }
+
+        .icon-land img {
+            margin-right: 10px;
+        }
+
+        /* Add your remaining CSS styles here */
+
+    </style>
+
+         
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Sisipkan file CSS eksternal jika diperlukan -->
+    <style>
+        /* CSS untuk bagian Landing Page */
+        #home {
+            background-color: #FFA775; /* Warna latar belakang */
+            padding: 50px; /* Padding untuk konten */
+            text-align: center; /* Pusatkan teks */
+        }
+
+        .landing-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Agar konten berada dalam satu baris */
+        }
+
+        .intro {
+            flex: 1; /* Biarkan intro memenuhi sebagian besar ruang */
+            max-width: 600px; /* Maksimum lebar konten */
+            text-align: left; /* Rata kiri teks pada intro */
+            margin-right: 20px; /* Jarak antara intro dan gambar profil */
+        }
+
+        .profile-pic {
+            flex: 1; /* Biarkan gambar profil memenuhi sebagian besar ruang */
+            max-width: 300px; /* Maksimum lebar gambar profil */
+            text-align: center; /* Pusatkan gambar profil */
+        }
+
+        .icon-land img {
+            margin: 10px; /* Jarak antara ikon */
+        }
+    
+    </style>
+
+
+<!-- Landing Page -->
+<section id="home">
+    <div class="landing-content">
+        <div class="intro">
+            <h2>Hello ! It's my Portfolio</h2>
+            <h1>I'm</h1>
+            <h1>Nadia Putri Jayanti</h1>
+            <p>I really love to design. In every design that I make, I am always striving to solve any problem that exists and to explore a deeper knowledge of design.</p>
+        </div>
+        <div class="icon-land">
+            <a href="#contact"><img src="images/Instagram_icon-icons.com_66804.png" alt="Icon instagram" style="width: 50px; height: 50px;"></a>
+            <a href="#contact"><img src="images/twitter.jpeg" alt="Icon phone" style="width: 50px; height: 50px;"></a>
+            <a href="#contact"><img src="images/icons8-phone-50.png" alt="Icon twitter" style="width: 50px; height: 50px;"></a>
+            <a href="#contact"><img src="images/icons8-email-96.png" alt="Icon email" style="width: 50px; height: 50px;"></a>
+        </div>
+        <div class="profile-pic">
+            <img src="images/icons8-metamask-logo-100.png" alt="Profile Picture" style="width: 250px; height: 250px;">
+        </div>
+    </div>
+</section>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Sisipkan file CSS eksternal jika diperlukan -->
+    <style>
+        /* About Me styles */
+        .about-me {
+            padding: 50px;
+            text-align: left; /* Mengatur teks menjadi rata kiri */
+        }
+
+        .about-text {
+            margin-bottom: 20px;
+        }
+
+        .about-img {
+            margin-bottom: 20px;
+        }
+    </style>
+<body>
+
+<!-- About Me -->
+<section id="about">
+    <div class="about-me">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <div class="about-img">
+                <img src="images/profil.jpg" alt="About Picture" style="width: 250px; height: 250px;">
+            </div>
+
+            <p>UI/UX DESIGNER</p>
+            <p>
+                Hallo, saya Nadia Putri Jayanti. Saya merupakan seorang mahasiswa tahun ke- 2 jurusan teknik informatika di Universitas Siliwangi. Sebagai mahasiswa informatika, saya sangat tertarik dan mendalami design untuk mengasah skill saya lebih jauh lagi. Saya sangat berpengalaman dalam pembuatan design dengan menggunakan figma terutama design untuk tampilan aplikasi. Design yang saya kerjakan,dengan mempadupadankan antar komponen,latar,warna,serta prototype yang menghasilkan design yang sangat menarik. Selain itu, saya pun cukup berpengalaman dalam pembuatan animasi 3D dengan gaya design yang khas dan juga menarik.
+            </p>
+        </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Skills styles */
+        #skills {
+            padding: 50px;
+            display: flex;
+            flex-wrap: wrap; /* Membungkus konten ke baris baru jika lebarnya tidak cukup */
+            gap: 20px; /* Memberikan jarak antara item */
+        }
+
+        .skill-icons {
+            display: flex; /* Mengatur konten di dalam .skill-icons menjadi flex */
+            align-items: center; /* Menyusun konten secara vertikal di tengah */
+            margin-right: 20px; /* Memberikan jarak antara item */
+        }
+
+        .skill-info {
+            max-width: 300px; /* Lebar maksimum teks keterampilan */
+        }
+    </style>
+<body>
+
+<!-- Skills -->
+<section id="skills">
+    <div class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-icons">
+            <img src="images/icons8-skill-64.png" alt="Writting skills" style="width: 100px; height: 100px; ">
+            <div class="skill-info">
+                <p>UX WRITING SKILLS</p>
+                <p>Memahami cara memilih kata yang tepat untuk navigasi interface yang mudah diterima oleh pengguna</p>
+            </div>
+        </div>
+        <div class="skill-icons">
+            <img src="images/icons8-skill-64 (1).png" alt="Wireframing skills" style="width: 100px; height: 100px; ">
+            <div class="skill-info">
+                <p>WIREFRAMING AND PROTOTYPING</p>
+                <p>Membuat wireframes untuk menjelaskan struktur halaman, layout, dan fungsionalitas aplikasi</p>
+            </div>
+        </div>
+        <div class="skill-icons">
+            <img src="images/icons8-skills-64.png" alt="visual design skills" style="width: 100px; height: 100px; ">
+            <div class="skill-info">
+                <p>VISUAL DESIGN SKILLS</p>
+                <p>Memahami cara menggunakan software visual design, seperti Figma, Sketch, Photoshop, dan Illustrator</p>
+            </div>
+        </div>
+        <div class="skill-icons">
+            <img src="images/image 2.jpg" alt="Figma" style="width: 100px; height: 100px; ">
+            <img src="images/image 4.jpg" alt="Canva" style="width: 100px; height: 100px; ">
+        </div>
+    </div>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Why Should Me styles */
+        #why-should-me {
+            padding: 50px;
+            text-align: left; /* Mengatur konten menjadi rata kiri */
+        }
+
+        .why-should-me {
+            margin-bottom: 30px;
+        }
+
+        .Whyme-icons {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
+        .Whyme-icons img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+<body>
+
+<!-- Why Should Me -->
+<section id="why-should-me">
+    <div class="why-should-me">
+        <h2>Why Should Me?</h2>
+        <img src="images/IMG_4022-copy.jpg" style="width: 300px; height: 200px; ">
+        <h1>Because I .....</h1>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/icons8-critical-thinking-96.png" alt="analisis problem">
+        <p>Memahami cara menganalisis masalah dan mengatur solusi</p>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/Group.jpg" alt="mengembangkan ide">
+        <p>Memahami cara mengembangkan ide dan mengatur desain yang unik</p>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/Vector.jpg" alt="mengkonsultan">
+        <p>Memahami cara mengkonsultan dengan tim dan mengubah ide menjadi realisasi</p>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/task_document_paper_descending_priority_tasks_documents_icon_142254 1.jpg" alt="prioritas">
+        <p>Memahami cara mengatur prioritas dan mengelola waktu</p>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/1486564172-finance-loan-money_81492 1.jpg" alt="bisnis">
+        <p>Memahami cara mengubah desain UI/UX menjadi solusi yang membantu bisnis mencapai tujuan</p>
+    </div>
+
+    <div class="Whyme-icons">
+        <img src="images/analysis_examination_scrutiny_deliberation_scanning_perusal_icon_146775 1.jpg" alt="optimal desain">
+        <p>Memahami cara mengoptimalkan desain dengan perhatian terhadap detail</p>
+    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Portfolio styles */
+        #portfolio {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .portfolio {
+            margin-bottom: 30px;
+        }
+
+        .portfolio-images {
+            display: flex;
+            justify-content: center; /* Mengatur gambar agar berada di tengah */
+            flex-wrap: wrap; /* Membungkus gambar ke baris baru jika lebar layar tidak cukup */
+            gap: 10px; /* Memberikan jarak antara gambar */
+        }
+
+        .portfolio-images img {
+            max-width: 100%; /* Mengatur lebar maksimum gambar agar tidak melebihi lebar container */
+            height: auto; /* Menjaga aspek gambar */
+        }
+    </style>
+<body>
+
+<!-- Portfolio -->
+<section id="portfolio">
+    <div class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-images">
+            <img src="images/Mockup_Desktop.jpg" alt="Project 1" style="width: 100px; height: 300px;">
+            <img src="images/Mockup_Ponsel.jpg" alt="Project 2" style="width: 95px; height: 300px;">
+            <img src="images/Mockup_Tablet.jpg" alt="Project 3" style="width: 90px; height: 300px;">
+            <img src="images/Screenshot (597).png" alt="Project 4" style="width: 300px; height: 300px;">
+            <img src="images/UTS_IMK_227006115 (1).jpg" alt="Project 5" style="width: 300px; height: 300px;">
+        </div>
+    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni</title>
+    <style>
+        /* Testimoni styles */
+        #testimoni {
+            padding: 50px;
+            text-align: left; /* Mengatur letak teks ke kiri */
+        }
+
+        .testimoni {
+            margin-bottom: 30px;
+        }
+
+        .testimoni-card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .testimoni-img {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .testimoni-img img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Membuat gambar bulat */
+            object-fit: cover; /* Menjaga aspek rasio gambar */
+            margin-bottom: 10px;
+        }
+
+        .testimoni-text {
+            font-style: italic;
+        }
+    </style>
+<body>
+
+<!-- Testimoni -->
+<section id="testimoni">
+    <div class="testimoni">
+        <h2>Testimoni</h2>
+        <!-- Testimoni content goes here -->
+        <div class="testimoni-card">
+            <div class="testimoni-img">
+                <img src="images/iconfinder-4-avatar-2754580_120522 1.jpg" alt="Person 1">
+                <h1>Dewi</h1>
+                <p>Perusahaan Shopee</p>
+            </div>
+            <div class="testimoni-content">
+                <div class="testimoni-text">
+                    "Pelayanan design dari tim ini adalah pelayanan yang tepat dan efektif. Mereka membantu saya membuat logo yang sesuai dengan kebutuhan dan visi dari perusahaan saya, dan membantu membuat logo yang sesuai dengan perilaku dan tujuan dari perusahaan saya.” </div>
+            </div>
+        </div>
+
+        <div class="testimoni-card">
+            <div class="testimoni-img">
+                <img src="images/iconfinder-9-avatar-2754584_120518 1.jpg" alt="Person 2">
+                <h1>Nayla</h1>
+                <p>Perusahaan Lazada</p>
+            </div>
+            <div class="testimoni-content">
+                <div class="testimoni-text">
+                    “Mereka mendengarkan kebutuhan saya dengan teliti dan menghasilkan desain yang melebihi harapan saya. Prosesnya lancar, komunikasi sangat baik, dan hasil akhirnya sungguh mengesankan. Sungguh merekomendasikan mereka untuk semua kebutuhan desain Anda!"</div>
+            </div>
+        </div>
+
+        <div class="testimoni-card">
+            <div class="testimoni-img">
+                <img src="images/iconfinder-3-avatar-2754579_120516 1.jpg" alt="Person 3">
+                <h1>Budi</h1>
+                <p>Perusahaan Gojek</p>
+            </div>
+            <div class="testimoni-content">
+                <div class="testimoni-text">
+                    "Tak dapat dipungkiri, pengalaman bekerja sama dengan tim desain ini sungguh luar biasa.Komunikasi yang efektif, kerja cepat, dan kreativitas yang luar biasa membuat saya merasa puas dan percaya sepenuhnya pada layanan desain mereka. Terima kasih atas dedikasi dan profesionalisme yang luar biasa!"</div>
+            </div>
+        </div>
+    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        /* Contact styles */
+        #contact {
+            padding: 50px;
+            text-align: left; /* Mengatur letak teks ke kiri */
+        }
+
+        .contact {
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contact -->
+<body>
+    <h1>CONTACT</h1>
+    <form id="contact-form" action="#" method="post">
+        <div>
+            <label for="full-name">Nama lengkap:</label>
+            <input type="text" id="full-name" name="full-name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="phone">Nomor handphone:</label>
+            <input type="text" id="phone" name="phone">
+        </div>
+        <div>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <button type="submit">Kirim</button>
+    </form>
+         <!-- Skrip jQuery untuk validasi formulir -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#contact-form").submit(function(e){
+                e.preventDefault();
+
+                var fullName = $("#full-name").val();
+                var email = $("#email").val();
+                var phone = $("#phone").val();
+                var message = $("#message").val();
+
+                if (fullName === "") {
+                    alert("Nama lengkap harus diisi");
+                    return false;
+                }
+
+                if (email === "") {
+                    alert("Email harus diisi");
+                    return false;
+                } else {
+                    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(email)) {
+                        alert("Format email tidak valid");
+                        return false;
+                    }
+                }
+
+                if (phone === "") {
+                    alert("Nomor handphone harus diisi");
+                    return false;
+                } else {
+                    var phonePattern = /^\d{10,12}$/;
+                    if (!phonePattern.test(phone)) {
+                        alert("Nomor handphone harus terdiri dari 10-12 digit angka");
+                        return false;
+                    }
+                }
+
+                if (message === "") {
+                    alert("Pesan harus diisi");
+                    return false;
+                }
+
+                // Jika semua validasi berhasil, formulir dapat dikirim
+                alert("Formulir berhasil dikirim!");
+                // Tambahan kode untuk mengirim formulir ke backend dapat ditambahkan di sini
+            });
+        });
+    </script>
+    </style>
+<br/>
+
+<!-- Footer -->
+<footer>
+    <div class="back-to-top">
+        <a href="#home">
+            <i class="fas fa-arrow-up"></i> Back to Top
+        </a>
+    </div>
+    <label class="logo-f">Nptrij</label>
+    <div id="footer">
+       
+   <div class="contact-f">
+    <h2>Contact</h2>
+    <p>+62 8543-2567-467</p>
+    <p>Nptrij@gmail.com</p>
+</div>
+        <div class="support">
+            <h2>Support</h2>
+            <p>Service</p>
+            <p>Support</p>
+            <p>Privacy Policy</p>
+        </div>
+        <div class="sosmed">
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <a href="https://www.facebook.com" target="_blank">
+                        <span class="tooltip">Facebook</span>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                    </a>
+                </li>
+                <li class="icon instagram">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <span class="tooltip">Instagram</span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </a>
+                </li>
+                <li class="icon twitter">
+                    <a href="https://www.twitter.com" target="_blank">
+                        <span class="tooltip">Twitter</span>
+                        <span><i class="fab fa-twitter"></i></span>
+                    </a>
+                </li>
+                <li class="icon Linked">
+                    <a href="https://www.Linked.com" target="_blank">
+                        <span class="tooltip">Linked</span>
+                        <span><i class="fab fa-Linked"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="coppy-right" >
+            <p>&copy; 2022 | <strong>Nptrij</strong> All Rights Reserved.</p>
+              </div>
+        
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    <script>
+    $(document).ready(function(){
+            // Fungsi untuk mengirim formulir
+            $("#contact-form").submit(function(e){
+                // Menghentikan pengiriman formulir secara default
+                e.preventDefault();
+    
+                // Validasi input nama lengkap
+                var fullName = $("#full-name").val();
+                if(fullName == ""){
+                    alert("Nama lengkap harus diisi");
+                    return false;
+                }
+    
+                // Validasi input email
+                var email = $("#email").val();
+                var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if(email == "" || !emailPattern.test(email)){
+                    alert("Email tidak valid");
+                    return false;
+                }
+    
+                // Validasi input nomor handphone
+                var phoneNumber = $("#phone").val();
+                var phonePattern = /^\d{10,12}$/;
+                if(phoneNumber == "" || !phonePattern.test(phoneNumber)){
+                    alert("Nomor handphone harus terdiri dari 10-12 digit angka");
+                    return false;
+                }
+    
+                // Validasi input pesan
+                var message = $("#message").val();
+                if(message == ""){
+                    alert("Pesan harus diisi");
+                    return false;
+                }
+    
+                // Jika semua validasi berhasil, formulir dapat dikirim
+                alert("Formulir berhasil dikirim!");
+                // Tambahkan kode pengiriman formulir ke backend di sini (misalnya AJAX)
+            });
+        });
+              
+</body>
+ </html>
